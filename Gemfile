@@ -1,0 +1,13 @@
+source 'http://rubygems.org'
+
+gem 'nanoc'
+gem 'kramdown'
+gem 'adsf'
+gem 'less'
+gem 'haml'
+gem 'mime-types'
+gem 'builder'
+gem 'nokogiri'
+gem 'coderay'
+gem 'octokit'
+gem 'yajl-ruby'
