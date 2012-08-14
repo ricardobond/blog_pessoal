@@ -33,16 +33,15 @@ compile '*' do
   end
 end
 
-route '/less/bootstrap/' do
+route '/less/bootstrap' do
   '/css/bootstrap.css'
 end
 
-route '/less/responsive/' do
+route '/less/responsive' do
   '/css/responsive.css'
 end
 
 route '/less/*/' do
-  # não fazer nada para os outros itens de css
 end
 
 route '/index.html.haml' do
