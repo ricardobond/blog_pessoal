@@ -6,6 +6,11 @@ require "nanoc"
 require "nanoc/cli"
 require "fileutils"
 
+desc "Limpa o diretório output deletando todos os arquivos"
+task :clear do
+  FileUtils.rm_r 'output/'
+end
+
 desc "Executa um webserver aguardando por atualizações"
 task :server do
   Nanoc::CLI.run ["autocompile"]
