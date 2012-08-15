@@ -13,6 +13,10 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+  copia_static
+end
+
 compile '/less/bootstrap' do
   filter :less
 end
@@ -34,11 +38,11 @@ compile '*' do
 end
 
 route '/less/bootstrap' do
-  '/css/bootstrap.css'
+  '/static/css/bootstrap.css'
 end
 
 route '/less/responsive' do
-  '/css/responsive.css'
+  '/static/css/responsive.css'
 end
 
 route '/less/*/' do
