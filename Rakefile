@@ -9,8 +9,8 @@ require "fileutils"
 desc "Limpa o diretório output deletando todos os arquivos"
 task :clear do
   if File.exists?('output')
-  FileUtils.rm_r 'output/'
-  puts "Diretório 'output' removido com sucesso!"
+    FileUtils.rm_r 'output/'
+    puts "Diretório 'output' removido com sucesso!"
   else
     puts "Diretório 'output' não existe!"
   end
