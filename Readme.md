@@ -2,9 +2,9 @@
 
 [nanoc3](http://nanoc.stoneship.org/) blog starter kit. Sob a licença FreeBSD.
 
-## Installation
+## Instalação
 
-From the command line
+Utilizando o terminal:
 
     % gem install bundler
     % git clone git://github.com/mgutz/nanoc3_blog.git your_blog
@@ -38,14 +38,14 @@ Visualize seu post após compilar o site.
 Coloque os arquivos estáticos no diretório `static/`. `static/*` será copiado para o diretório `output/` após a compilação.
 
 
-## Configuration
+## Configuração
 
 Edite os seguintes arquivos:
 
     config.yaml
     atom.xml.haml
 
-### Commenting
+### Comentários
 
 DISQUS permite que usuários possam fazer comentários em seu blog estático! Registre-se [DISQUS](http://disqus.com) para usar o serviço. Você precisa inserir o shortname do seu blog cadastrado no DISQUS em `disqus_shortname` no arquivo `config.yaml`.
 Para desabilitar o recurso é só comentar a linha `disqus_shortname` no mesmo arquivo.
