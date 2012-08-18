@@ -1,4 +1,7 @@
-# Diretório aonde se localizam os arquivos de css
+# Define a quantidade de artigos exibidos por página
+page_size: 5
+
+# Diretório aonde se localizam os arquivos de css deve obedecer o padrão: "/foo/bar/"
 css_dir: "/static/css/"
 
 # Título do blog

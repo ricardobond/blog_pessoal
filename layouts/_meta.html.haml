@@ -3,4 +3,16 @@
 - else
   %title Ricardo Caldeira Blog
 
-= css_meta
+%meta{:charset => "utf-8"}
+
+// CSS META
+%meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+= load_style_links
+
+// FACEBOOK META
+%meta{:property=>"og:image", :content=>"http://www.ricardocaldeira.com/assets/img/logo.png"}
+%meta{:property=>"og:title", :content=>"Ricardo Caldeira Blog"}
+%meta{:property=>"og:type", :content=>"blog"}
+%meta{:property=>"og:url", :content=>"http://www.ricardocaldeira.com"}
+%meta{:property=>"og:site_name", :content=>"Ricardo Caldeira"}
+%meta{:property=>"fb:admins", :content=>"100001186650257"}

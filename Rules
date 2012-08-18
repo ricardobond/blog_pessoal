@@ -26,9 +26,6 @@ compile '/less/responsive' do
 end
 
 compile '/less/*/' do
-  #@items.each do |i|
-  #  puts vetor_de_itens << i[:filename].sub("content/less/", "") if i[:extension] == "less"
-  #end
 end
 
 compile '*' do
