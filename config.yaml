@@ -1,3 +1,6 @@
+# Diretório aonde se localizam os arquivos de css
+css_dir: "/static/css/"
+
 # Título do blog
 title: "Ricardo Caldeira Blog"
 
