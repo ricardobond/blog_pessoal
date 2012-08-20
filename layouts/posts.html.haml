@@ -1,0 +1,26 @@
+!!!
+%html{:lang => 'en'}
+  %head
+    = render '_meta.html'
+  %body
+    = render '_facebook.html'
+    = render '_analytics.html'
+    .container
+      = render '_header.html'
+      .clear
+      .row
+        .span12
+          - @item[:articles].each do |article|
+            %article
+              %h2.titulo-do-post
+                %a{href: article.path}= article[:title]
+              .post-meta
+                %div.autor= "#{article[:author]} | #{exibir_data(article[:created_at])}"
+                %div.botao-twitter
+                  = render "_twitter_button.html", :url => @config[:base_url] + article.path, :title => article[:title]
+              .clear
+              = resumo_do_artigo(article.compiled_content)
+          - if @item[:prev]
+            %a{href: @item[:prev].path}= "Página anterior"
+          - if @item[:next]
+            %a{href: @item[:next].path}= "Próxima página" 

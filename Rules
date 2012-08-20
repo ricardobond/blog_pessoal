@@ -15,6 +15,7 @@
 
 preprocess do
   copia_static
+  paginar_artigos
 end
 
 compile '/less/bootstrap' do
@@ -31,6 +32,11 @@ end
 compile '/posts/*' do
   filter :kramdown
   layout 'post.html'
+end
+
+compile '/page/*' do
+  filter :haml, :ugly => true
+  layout 'posts.html'
 end
 
 compile '*' do

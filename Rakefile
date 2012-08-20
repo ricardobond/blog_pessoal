@@ -76,6 +76,7 @@ kind: article
 publish: true
 tags: [misc]
 title: "#{title.gsub("-", " ")}"
+author: "Nome do Autor"
 ---
 
     TODO: Adicionar conteúdo em `#{full_path}.`
