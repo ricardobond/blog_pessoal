@@ -1,4 +1,8 @@
 require 'fileutils'
+require 'bitly'
+
+BITLY_USER = "o_2lgho3gh30"
+BITLY_API_KEY = "R_139276d28fcb82fcc533f407dc2e9ce1"
 
 def copia_static
   FileUtils.cp_r 'static/.', 'output/static/'
@@ -19,6 +23,8 @@ def load_style_links(filtro = "less")
   return meta_css_final
 end
 
-def renderiza_teste
-  render '_facebook_like_button.html'
+def encurtar_url(url_longa = 'http://www.google.com', opcoes = {}, 
+  bitly_url = Bitly::Url.new(BITLY_USER, BITLY_API_KEY, :long_url => url_longa))
+  bitly_url.shorten
+  return bitly_url.short_url
 end
