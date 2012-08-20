@@ -1,0 +1,15 @@
+source 'http://rubygems.org'
+
+gem 'bitly'
+gem 'nanoc'
+gem 'kramdown'
+gem 'less'
+gem 'adsf'
+gem 'haml'
+gem 'mime-types'
+gem 'builder'
+gem 'nokogiri'
+gem 'coderay'
+gem 'octokit'
+gem 'yajl-ruby'
+gem 'therubyracer', :platform => :ruby
