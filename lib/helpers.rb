@@ -18,3 +18,7 @@ def load_style_links(filtro = "less")
   end
   return meta_css_final
 end
+
+def renderiza_teste
+  render '_facebook_like_button.html'
+end

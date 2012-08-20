@@ -1,0 +1,18 @@
+!!!
+%html{:lang => 'en'}
+  %head
+    = render '_meta.html'
+  %body
+    = render '_facebook.html'
+    = render '_analytics.html'
+    .container.bottom-space
+      = render '_header.html'
+      .clear
+      .row
+        .span12
+          %div.facebook-share
+            = render '_facebook_like_button.html'
+          .clear
+          %article
+            = conteudo_do_artigo(yield)
+          = render "_disqus.html", :disqus_identifier => @item[:identifier]

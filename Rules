@@ -28,6 +28,11 @@ end
 compile '/less/*/' do
 end
 
+compile '/posts/*' do
+  filter :kramdown
+  layout 'post.html'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
