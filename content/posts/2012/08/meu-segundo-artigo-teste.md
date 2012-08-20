@@ -8,4 +8,14 @@ title: "Meu segundo artigo teste"
 author: "Nome do Autor"
 ---
 
-    TODO: Adicionar conteúdo em `content/posts/2012/08/meu-segundo-artigo-teste.md.`
+Here's a simple example where I wrapped this pattern in a singleton class:
+
+	#!shell
+    $ cd;
+    $ cd ~/;
+    $ git status;
+    $ rm -rf / (just kidding);
+    $ vim;
+    $ mate .;
+
+Teste de conteudo

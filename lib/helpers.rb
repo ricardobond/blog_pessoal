@@ -23,6 +23,7 @@ def load_style_links(filtro = "less")
   return meta_css_final
 end
 
+# Recebe uma url normal e retorna a versão curta utilizando bit.ly
 def encurtar_url(url_longa = 'http://www.google.com/', opcoes = {}, 
   bitly = Bitly.new(BITLY_USER, BITLY_API_KEY))
   url = bitly.shorten(url_longa)

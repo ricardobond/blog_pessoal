@@ -18,6 +18,7 @@
                 %div.autor= "#{article[:author]} | #{exibir_data(article[:created_at])}"
                 %div.botao-twitter
                   = render "_twitter_button.html", :url => encurtar_url("#{@config[:base_url]}#{article.path}"), :title => article[:title]
+                  = render "_facebook_like_button.html"
               .clear
               = resumo_do_artigo(article.compiled_content)
           - if @item[:prev]
