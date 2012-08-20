@@ -23,8 +23,8 @@ def load_style_links(filtro = "less")
   return meta_css_final
 end
 
-def encurtar_url(url_longa = 'http://www.google.com', opcoes = {}, 
-  bitly_url = Bitly::Url.new(BITLY_USER, BITLY_API_KEY, :long_url => url_longa))
-  bitly_url.shorten(opts = opcoes)
-  return bitly_url.short_url
+def encurtar_url(url_longa = 'http://www.google.com/', opcoes = {}, 
+  bitly = Bitly.new(BITLY_USER, BITLY_API_KEY))
+  url = bitly.shorten(url_longa)
+  return url.short_url
 end

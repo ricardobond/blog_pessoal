@@ -12,7 +12,7 @@ end
 # Recebe uma string e tenta convertê-la se possível para uma data
 # Seguindo o padrão DD/MM/AAAA
 def exibir_data(valor)
-  attribute_to_time(valor).strftime("%d-%m-%Y")
+  attribute_to_time(valor).strftime("%d/%m/%Y")
 end
 
 # A partir dos ítens com o atributo kind: 'article'
