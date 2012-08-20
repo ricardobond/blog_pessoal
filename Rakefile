@@ -60,7 +60,7 @@ namespace :criar do
       exit 1
     end
     
-    title =  ENV['title'].capitalize.gsub(" ", "-")
+    title =  ENV['title'].gsub(" ", "-")
     path, nome_do_arquivo, full_path = calcula_paths(title)
     
     if File.exists?(full_path)
@@ -89,7 +89,7 @@ EOF
   
   def calcula_paths(titulo)
     path = "content/posts/" + @ymd[0..7]
-    nome_do_arquivo = titulo + ".md"
+    nome_do_arquivo = titulo.downcase + ".md"
     [path, nome_do_arquivo, path + nome_do_arquivo]
   end
   
