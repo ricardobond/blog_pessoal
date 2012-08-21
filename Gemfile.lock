@@ -51,6 +51,7 @@ GEM
       hashie (~> 1.2)
       multi_json (~> 1.3)
     rack (1.4.1)
+    systemu (2.5.2)
     therubyracer (0.10.1)
       libv8 (~> 3.3.10)
     yajl-ruby (1.1.0)
@@ -70,5 +71,6 @@ DEPENDENCIES
   nanoc
   nokogiri
   octokit
+  systemu
   therubyracer
   yajl-ruby

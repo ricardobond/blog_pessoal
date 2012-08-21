@@ -1,3 +1,9 @@
+# Deploy do site utilizando o comando nanoc deploy --target 'public'
+deploy:
+  public:
+    kind: rsync
+    dst:  "ricardobond@ricardocaldeira.com:~/blog.ricardocaldeira.com"
+
 # Define a quantidade de artigos exibidos por página
 page_size: 5
 

@@ -13,3 +13,4 @@ gem 'coderay'
 gem 'octokit'
 gem 'yajl-ruby'
 gem 'therubyracer', :platform => :ruby
+gem 'systemu'
