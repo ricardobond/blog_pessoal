@@ -35,6 +35,10 @@ compile '/posts/*' do
   layout 'post.html'
 end
 
+compile '/index.xml.haml' do
+  filter :haml
+end
+
 compile '/page/*' do
   filter :haml, :ugly => true
   layout 'posts.html'
@@ -58,6 +62,10 @@ route '/less/responsive' do
 end
 
 route '/less/*/' do
+end
+
+route '/index.xml.haml' do
+  '/rss.xml'
 end
 
 route '/index.html.haml' do
