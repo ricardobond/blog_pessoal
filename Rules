@@ -35,6 +35,10 @@ compile '/posts/*' do
   layout 'post.html'
 end
 
+compile 'sitemap.xml' do
+  filter :haml
+end
+
 compile '/index.xml.haml' do
   filter :haml
 end
