@@ -4,6 +4,10 @@ page_size: 5
 # Diretório aonde se localizam os arquivos de css deve obedecer o padrão: "/foo/bar/"
 css_dir: "/static/css/"
 
+# Autor do blog
+author_name: "Ricardo Caldeira"
+author_uri: "http://www.ricardocaldeira.com"
+
 # Título do blog
 title: "Ricardo Caldeira Blog"
 
