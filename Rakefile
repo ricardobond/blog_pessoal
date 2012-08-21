@@ -42,7 +42,7 @@ task  :github do
       :updated_at => repositorio.updated_at
     })
   end
-  json = Yajl::Encoder.encode(data)
+  json = Yajl::Encoder.encode(dados)
   File.open('data/github.json', 'w') do |arquivo|
     arquivo.write(json)
   end
