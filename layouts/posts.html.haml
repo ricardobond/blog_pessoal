@@ -12,11 +12,13 @@
         .span12
           - @item[:articles].each do |article|
             %article
-              %h2.titulo-do-post
-                %a{href: article.path}= article[:title]
               .post-meta
-                %div.autor= "#{article[:author]} | #{exibir_data(article[:created_at])}"
-                %div.botao-twitter
+                %h2.titulo-do-post
+                  %a{href: article.path}= article[:title]
+                %div.autor
+                  = "#{article[:author]} | #{exibir_data(article[:created_at])}"
+                  %a{href: article.path + "#disqus_thread", "data-disqus-identifier" => article[:identifier]} Comments
+                %div.social-buttons
                   = render "_twitter_button.html", :url_twitter => encurtar_url("#{@config[:base_url]}#{article.path}"), :title => article[:title]
                   = render "_facebook_like_button.html", :url_facebook => "#{@config[:base_url]}#{article.path}"
               .clear
@@ -25,3 +27,12 @@
             %a{href: @item[:prev].path}= "Página anterior"
           - if @item[:next]
             %a{href: @item[:next].path}= "Próxima página"
+    // Necessário para mostrar a quantidade de comentários
+    :javascript
+      var disqus_shortname = 'futuresimplelab';
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());

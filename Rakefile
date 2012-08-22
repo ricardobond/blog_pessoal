@@ -52,7 +52,7 @@ namespace :criar do
   
   desc "Gera um template de artigo baseado na data do sistema"
   task :artigo do
-    @ymd = Time.now.strftime("%Y/%m/%d")
+    @ymd = Time.now.strftime("%Y/%m/%d %H:%M:%S")
     dir = @ymd[0..6] # me retorna apenas o ano e o mês da data ex.: 2012/08/
     
     if !ENV['title']

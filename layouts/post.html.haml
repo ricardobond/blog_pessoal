@@ -10,9 +10,15 @@
       = render '_header.html'
       .clear
       .row
-        .span12
-          %div.facebook-share
-            = render '_facebook_like_button.html'
+        .span12.post-conteudo
+          %h1.post-titulo
+            = @item[:title]
+          .post-meta
+            %div.autor= "#{@item[:author]} | #{exibir_data(@item[:created_at])}"
+            %div.twitter-button
+              = render '_twitter_button.html'
+            %div.facebook-share
+              = render '_facebook_like_button.html'
           .clear
           %article
             = conteudo_do_artigo(yield)
