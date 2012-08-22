@@ -18,7 +18,7 @@ author_uri: "http://www.ricardocaldeira.com"
 title: "Ricardo Caldeira Blog"
 
 # Insira aqui a url base do seu website
-base_url: "http://blog.ricardocaldeira.com"
+base_url: "http://blog.ricardocaldeira.com/"
 
 #DISQUS Site shortname. Necessário para que os comentários funcionem corretamente. Comente para desabilitar.
 disqus_shortname: blogricardocaldeira
