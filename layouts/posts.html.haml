@@ -27,6 +27,8 @@
             %a{href: @item[:prev].path}= "Next page"
           - if @item[:next]
             %a{href: @item[:next].path}= "Previous page"
+        .clear
+        .span12
           = render '_nuvem_de_tags.html'
     // Necessário para mostrar a quantidade de comentários
     :javascript

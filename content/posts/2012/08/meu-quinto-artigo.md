@@ -3,7 +3,7 @@ created_at: 2012/08/22 15:05:59
 excerpt: 
 kind: article
 publish: true
-tags: [misc]
+tags: [ricardo, caldeira, figueiredo, alone, dark, jovem, nerd, teste]
 title: "Meu quinto artigo"
 author: "Nome do Autor"
 ---

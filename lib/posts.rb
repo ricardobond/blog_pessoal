@@ -50,8 +50,12 @@ def paginar_artigos
 end
 
 def mostrar_nuvem_de_tags
-  tamanhos_de_tags = calcula_tamanhos(qtde_de_valores_de_tags)
-  teste = [1,2,3]
+  tags = nuvem_de_tags
+  lista_de_tags = ""
+  tags.each do |tag|
+    lista_de_tags << "<li title='#{tag[:name]} - #{tag[:qtde]}' style='font-size: #{tag[:tam]}em'><a href='/tags/#{tag[:name]}'>#{tag[:name]}</a></li>\n"
+  end
+  return lista_de_tags
 end
 
 def nuvem_de_tags
@@ -62,35 +66,35 @@ def nuvem_de_tags
   tags.each do |tag|
     hash[tag] += 1
   end
-  hash.sort_by { |tag_name, tag_qtde| tag_qtde }
   hash.each do |key, value|
-    final << {:tag => key, :qtde => value}
+    final << {:name => key, :qtde => value}
     quantidades << value
   end
   final.sort_by {|key| key[:qtde] }
-  quantidades.uniq!.reverse!
+  quantidades.uniq!.sort!
   tamanhos = calcula_tamanhos(quantidades.size)
   tam_vs_qtde = {}
   quantidades.each_with_index { |k,i| tam_vs_qtde[k] = tamanhos[i] }
-  #return tam_vs_qtde
   final.each do |e|
     e[:tam] = tam_vs_qtde.fetch(e[:qtde])
   end
-  return final
+  return final.sort_by {|key| key[:tam]}.reverse
 end
 
 def calcula_tamanhos(qtde_de_tags_unicas = 4, tam_inicial = 1.00, tam_final = 3.00)
   # PA
   razao = (tam_final - tam_inicial) / (qtde_de_tags_unicas - 1)
   
-  numeros = []
-  (qtde_de_tags_unicas - 1).times do |i|
-    if numeros.empty?
-      numeros << format("%.2f",tam_inicial)
+  tamanhos = []
+  (qtde_de_tags_unicas).times do |i|
+    if tamanhos.empty?
+      tamanhos << format("%.2f",tam_inicial)
+    else
+      tamanhos << format("%.2f",tam_inicial + i*razao)
+      i += 1
     end
-    numeros << format("%.2f",tam_inicial + (i+=1)*razao)
   end
-  return numeros
+  return tamanhos
 end
 
 def colecao_de_tags
