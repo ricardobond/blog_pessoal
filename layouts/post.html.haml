@@ -16,9 +16,8 @@
           .post-meta
             %div.autor
               = "#{@item[:author]} | #{exibir_data(@item[:created_at])}"
-            %div.twitter-button
+            %div.social-buttons
               = render '_twitter_button.html', :url_twitter => encurtar_url("#{@config[:base_url]}#{item.path}"), :title => item[:title]
-            %div.facebook-share
               = render "_facebook_like_button.html", :url_facebook => "#{@config[:base_url]}#{item.path}"
           .clear
           %article
