@@ -3,7 +3,7 @@ created_at: 2012/08/22 15:04:53
 excerpt: 
 kind: article
 publish: true
-tags: [misc]
+tags: [teste, testando, testarei]
 title: "Meu segundo artigo"
 author: "Nome do Autor"
 ---

@@ -48,3 +48,56 @@ def paginar_artigos
   root[:next] = novos_itens[1]
   
 end
+
+def mostrar_nuvem_de_tags
+  tamanhos_de_tags = calcula_tamanhos(qtde_de_valores_de_tags)
+  teste = [1,2,3]
+end
+
+def nuvem_de_tags
+  tags = colecao_de_tags
+  hash = Hash.new(0)
+  final = []
+  quantidades = []
+  tags.each do |tag|
+    hash[tag] += 1
+  end
+  hash.sort_by { |tag_name, tag_qtde| tag_qtde }
+  hash.each do |key, value|
+    final << {:tag => key, :qtde => value}
+    quantidades << value
+  end
+  final.sort_by {|key| key[:qtde] }
+  quantidades.uniq!.reverse!
+  tamanhos = calcula_tamanhos(quantidades.size)
+  tam_vs_qtde = {}
+  quantidades.each_with_index { |k,i| tam_vs_qtde[k] = tamanhos[i] }
+  #return tam_vs_qtde
+  final.each do |e|
+    e[:tam] = tam_vs_qtde.fetch(e[:qtde])
+  end
+  return final
+end
+
+def calcula_tamanhos(qtde_de_tags_unicas = 4, tam_inicial = 1.00, tam_final = 3.00)
+  # PA
+  razao = (tam_final - tam_inicial) / (qtde_de_tags_unicas - 1)
+  
+  numeros = []
+  (qtde_de_tags_unicas - 1).times do |i|
+    if numeros.empty?
+      numeros << format("%.2f",tam_inicial)
+    end
+    numeros << format("%.2f",tam_inicial + (i+=1)*razao)
+  end
+  return numeros
+end
+
+def colecao_de_tags
+  tags_coletadas = []
+  artigos = sorted_articles
+  artigos.each do |artigo|
+    tags_coletadas.concat artigo[:tags]
+  end
+  return tags_coletadas
+end

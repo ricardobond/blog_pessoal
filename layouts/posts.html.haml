@@ -24,9 +24,10 @@
               .clear
               = resumo_do_artigo(article.compiled_content)
           - if @item[:prev]
-            %a{href: @item[:prev].path}= "Página anterior"
+            %a{href: @item[:prev].path}= "Next page"
           - if @item[:next]
-            %a{href: @item[:next].path}= "Próxima página"
+            %a{href: @item[:next].path}= "Previous page"
+          = render '_nuvem_de_tags.html'
     // Necessário para mostrar a quantidade de comentários
     :javascript
       var disqus_shortname = 'futuresimplelab';

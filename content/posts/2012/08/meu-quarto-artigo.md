@@ -3,7 +3,7 @@ created_at: 2012/08/22 15:05:53
 excerpt: 
 kind: article
 publish: true
-tags: [misc]
+tags: [teste]
 title: "Meu quarto artigo"
 author: "Nome do Autor"
 ---
