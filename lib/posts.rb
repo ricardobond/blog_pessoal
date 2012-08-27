@@ -39,14 +39,23 @@ def paginar_artigos
     item[:prev] = i == 0 ? nil : novos_itens[i-1]
   end
   
-  novos_itens.each do |item|
-    @items << item
-  end
+  add_to_items_list(novos_itens)
   
   root = @items.find { |e| e.identifier =~ /index.html/ }
   root[:articles] = grupos_de_artigos[0]
   root[:next] = novos_itens[1]
-  
+end
+
+def criar_paginas_de_tags
+  tags = colecao_de_tags.uniq!
+  paginas_de_tags = []
+  tags.each do |tag|
+    atributos = {
+      :title => "Artigos com a tag: #{tag}"
+    }
+    paginas_de_tags << Nanoc::Item.new("#{tag}", atributos, "/tags/#{tag}", {:binary => false})
+  end
+  add_to_items_list(paginas_de_tags)
 end
 
 def mostrar_nuvem_de_tags
@@ -104,4 +113,12 @@ def colecao_de_tags
     tags_coletadas.concat artigo[:tags]
   end
   return tags_coletadas
+end
+
+private
+
+def add_to_items_list(items)
+  items.each do |item|
+    @items << item
+  end
 end
