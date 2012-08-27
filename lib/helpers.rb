@@ -26,6 +26,7 @@ end
 # Recebe uma url normal e retorna a versão curta utilizando bit.ly
 def encurtar_url(url_longa = 'http://www.google.com/', opcoes = {}, 
   bitly = Bitly.new(BITLY_USER, BITLY_API_KEY))
+  Bitly.use_api_version_3
   url = bitly.shorten(url_longa)
   return url.short_url
 end
