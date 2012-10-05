@@ -47,13 +47,14 @@ def paginar_artigos
 end
 
 def criar_paginas_de_tags
-  tags = colecao_de_tags.uniq!
+  tags = colecao_de_tags.uniq
   paginas_de_tags = []
   tags.each do |tag|
     atributos = {
-      :title => "Artigos com a tag: #{tag}"
+      :title => "Artigos com a tag: #{tag}",
+      :tag_name => tag
     }
-    paginas_de_tags << Nanoc::Item.new("#{tag}", atributos, "/tags/#{tag}", {:binary => false})
+    paginas_de_tags << Nanoc::Item.new("#{tag}", atributos, "/tag/#{tag}", {:binary => false})
   end
   add_to_items_list(paginas_de_tags)
 end

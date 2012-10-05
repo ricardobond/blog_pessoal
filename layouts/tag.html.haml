@@ -1,0 +1,23 @@
+!!!
+%html{:lang => 'en'}
+  %head
+    = render '_meta.html'
+  %body
+    = render '_facebook.html'
+    = render '_analytics.html'
+    .container
+      = render '_header.html'
+      .clear
+      .row
+        .span3
+          %h1 Posts with tag #{item[:tag_name]}
+        
+        .span9
+          - articles_with_tag = items_with_tag(item[:tag_name]).sort_by! {|item| item[:created_at]}.reverse
+          - articles_with_tag.each do |article|
+            .post-with-tag
+              %a{:href => article.path}= article[:title]
+              %br
+              %span.tag-meta
+                Published at: 
+                =exibir_data article[:created_at]

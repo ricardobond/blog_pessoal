@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.2, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="adsf (v1.1.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bitly (v0.8.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.21, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coderay (v1.0.7, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="colored (v1.2, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="commonjs (v0.2.6, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="crack (v0.3.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cri (v2.3.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faraday (v0.8.4, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faraday_middleware (v0.8.8, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="haml (v3.1.6, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashie (v1.2.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="httparty (v0.8.3, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="httpauth (v0.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jwt (v0.1.5, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kramdown (v0.13.7, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="less (v2.2.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.3.10.4, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.19, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.3.6, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.5.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multipart-post (v1.1.5, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nanoc (v3.4.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.5, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="oauth2 (v0.8.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="octokit (v1.9.4, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="systemu (v2.5.2, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="therubyracer (v0.10.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="yajl-ruby (v1.1.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+  </component>
+</module>
+

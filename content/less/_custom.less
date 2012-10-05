@@ -15,11 +15,14 @@ article {
 .titulo-do-post {
 	font-size: 36px;
 	line-height: 38px;
+	font-family: @sansFontFamily;
+	font-weight: bold;
 }
 
 .autor {
 	text-transform: uppercase;
 	margin-bottom: 7px;
+	font-style: italic;
 }
 
 // POST
@@ -52,4 +55,18 @@ ul.nuvem-de-tags {
 		line-height: 1.5em;
 		padding: 0.25em 0.5em;
 	}
+}
+
+.post-with-tag {
+	text-transform: uppercase;
+	font-family: @sansFontFamily;
+	letter-spacing: 2px;
+	font-size: 12px;
+	margin-bottom: 30px;
+}
+
+span.tag-meta {
+	.autor;
+	text-transform: none !important;
+	color: @grayLighter;
 }

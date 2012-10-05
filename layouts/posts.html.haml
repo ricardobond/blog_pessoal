@@ -16,26 +16,17 @@
                 %h2.titulo-do-post
                   %a{href: article.path}= article[:title]
                 %div.autor
-                  = "#{article[:author]} | #{exibir_data(article[:created_at])}"
-                  %a{href: article.path + "#disqus_thread", "data-disqus-identifier" => article[:identifier]} Comments
+                  = "#{exibir_data(article[:created_at])}"
+                  //%a{href: article.path + "#disqus_thread", "data-disqus-identifier" => article[:identifier]} Comments
                 %div.social-buttons
                   = render "_twitter_button.html", :url_twitter => encurtar_url("#{@config[:base_url]}#{article.path}"), :title => article[:title]
                   = render "_facebook_like_button.html", :url_facebook => "#{@config[:base_url]}#{article.path}"
               .clear
               = resumo_do_artigo(article.compiled_content)
           - if @item[:prev]
-            %a{href: @item[:prev].path}= "Next page"
+            %a{href: @item[:prev].path}= "Newer posts"
           - if @item[:next]
-            %a{href: @item[:next].path}= "Previous page"
+            %a{href: @item[:next].path}= "Older posts"
         .clear
         .span12
           = render '_nuvem_de_tags.html'
-    // Necessário para mostrar a quantidade de comentários
-    :javascript
-      var disqus_shortname = 'futuresimplelab';
-      (function () {
-          var s = document.createElement('script'); s.async = true;
-          s.type = 'text/javascript';
-          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
