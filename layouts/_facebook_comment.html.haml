@@ -1,0 +1,8 @@
+%h3
+  %fb:comments-count{:href => "#{url_for(item)}"}
+  comments
+%br
+Leave a comment or contact me via twitter 
+= link_to("@ricardocaldeira", "http://twitter.com/ricardocaldeira", :target => "_blank")
+
+.fb-comments{ :'data-href' => "#{url_for(item)}", :'data-num-posts' => "10", :'data-width' => "470" }
