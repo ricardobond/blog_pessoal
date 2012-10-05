@@ -17,12 +17,12 @@
             %div.autor
               = "#{@item[:author]} | #{exibir_data(@item[:created_at])}"
             %div.social-buttons
-              = render '_twitter_button.html', :url_twitter => encurtar_url("#{@config[:base_url]}#{item.path}"), :title => item[:title]
-              = render "_facebook_like_button.html", :url_facebook => "#{@config[:base_url]}#{item.path}"
+              = render "_twitter_button.html", :url_twitter => encurtar_url(url_for(item)), :title => item[:title]
+              = render "_facebook_like_button.html", :url_facebook => url_for(item)
           .clear
           %article
             = conteudo_do_artigo(yield)
             .tags
               Tags: 
               = tags_for(@item, :base_url => @config[:base_url] + "tags/")
-          //= render "_facebook_comment.html"
+          = render "_facebook_comment.html"

@@ -19,8 +19,8 @@
                   = "#{exibir_data(article[:created_at])}"
                   //%a{href: article.path + "#disqus_thread", "data-disqus-identifier" => article[:identifier]} Comments
                 %div.social-buttons
-                  = render "_twitter_button.html", :url_twitter => encurtar_url("#{@config[:base_url]}#{article.path}"), :title => article[:title]
-                  = render "_facebook_like_button.html", :url_facebook => "#{@config[:base_url]}#{article.path}"
+                  = render "_twitter_button.html", :url_twitter => encurtar_url(url_for(article)), :title => article[:title]
+                  = render "_facebook_like_button.html", :url_facebook => url_for(article)
               .clear
               = resumo_do_artigo(article.compiled_content)
           - if @item[:prev]
