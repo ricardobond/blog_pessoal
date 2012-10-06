@@ -63,7 +63,7 @@ def mostrar_nuvem_de_tags
   tags = nuvem_de_tags
   lista_de_tags = ""
   tags.each do |tag|
-    lista_de_tags << "<li title='#{tag[:name]} - #{tag[:qtde]}' style='font-size: #{tag[:tam]}em'><a href='/tags/#{tag[:name]}'>#{tag[:name]}</a></li>\n"
+    lista_de_tags << "<li title='#{tag[:name]} - #{tag[:qtde]}' style='font-size: #{tag[:tam]}em'><a href='/tags/#{tag[:name]}/'>#{tag[:name]}</a></li>\n"
   end
   return lista_de_tags
 end

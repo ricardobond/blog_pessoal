@@ -25,7 +25,7 @@
             = conteudo_do_artigo(yield)
             .tags
               Tags: 
-              = tags_for(@item, :base_url => @config[:base_url] + "tags/")
+              = tags_for(@item, :base_url => @config[:base_url] + "/tags/")
               %br
               Short URL:
               = link_to("#{item_short_url}", "#{item_short_url}")
